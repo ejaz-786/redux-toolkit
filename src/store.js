@@ -1,3 +1,4 @@
+import { rewardReducer } from "./reducers/reward";
 import accountReducer from "./slices/accountSlice";
 import bonusReducer from "./slices/bonusSlice";
 
@@ -8,5 +9,6 @@ export const store = configureStore({
   reducer: {
     account: accountReducer,
     bonus: bonusReducer,
+    reward: rewardReducer,
   },
 });

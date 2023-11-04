@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import "./App.css";
 import Account from "./component/Account";
 import Bonus from "./component/Bonus";
+import Reward from "./component/Reward";
 
 function App() {
   const account = useSelector((state) => state.account);
@@ -15,6 +16,7 @@ function App() {
         <hr />
         <Account />
         <Bonus />
+        <Reward />
       </div>
     </>
   );
