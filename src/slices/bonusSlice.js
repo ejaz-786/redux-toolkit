@@ -1,4 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAction, createSlice } from "@reduxjs/toolkit";
+
+// extra Action of account
+const incrementByAmt = createAction("account/increamentByAmount");
 
 const initialState = {
   points: 0,
@@ -11,6 +14,13 @@ export const bonusSlice = createSlice({
     increamentBonus: (state, action) => {
       state.points += 1;
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(incrementByAmt, (state, action) => {
+      if (action.payload > 100) {
+        state.points += 5;
+      }
+    });
   },
 });
 
