@@ -7,3 +7,10 @@
   margin: 15px auto;
   text-align: center;
 }
+
+.list {
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid rgb(1, 16, 10);
+  border-radius: 10px;
+}
