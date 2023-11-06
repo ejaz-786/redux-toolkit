@@ -5,6 +5,7 @@ import Bonus from "./component/Bonus";
 import Reward from "./component/Reward";
 import { useEffect } from "react";
 import { getCurrentUserAccount } from "./slices/accountSlice";
+import Admin from "./component/Admin";
 
 function App() {
   const account = useSelector((state) => state.account);
@@ -26,6 +27,7 @@ function App() {
         </h2>
         <h2>Total Points: {bonus.points} </h2>
         <hr />
+        <Admin />
         <Account />
         <Bonus />
         <Reward />

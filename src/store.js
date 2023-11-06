@@ -1,3 +1,4 @@
+import { adminApi } from "./api/adminSlice";
 import { rewardReducer } from "./reducers/reward";
 import accountReducer from "./slices/accountSlice";
 import bonusReducer from "./slices/bonusSlice";
@@ -10,5 +11,8 @@ export const store = configureStore({
     account: accountReducer,
     bonus: bonusReducer,
     reward: rewardReducer,
+    [adminApi.reducerPath]: adminApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(adminApi.middleware),
 });
